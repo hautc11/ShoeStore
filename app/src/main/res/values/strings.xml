@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcome_des">Hi there! Do you want to see my shoes collection? \n\nPlease click button below to discover my collection.</string>
+    <string name="lets_go">Let\'s go</string>
+    <string name="start">Start</string>
+    <string name="logout">Logout</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="company">Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="description">Description</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="instruction">Instruction</string>
+    <string name="instruction_description">
+        1. Click `Start` button to navigate to Shoe List Screen\n2. On Shoe List Screen, press float pinky button to add new Shoe\n3. Press `Save` to save your data and vice versa click `Cancel` to cancel your action
+    </string>
+</resources>

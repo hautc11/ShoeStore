@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="shoeItem"
+            type="com.udacity.shoestore.models.Shoe" />
+
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.ShoeListViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ShoeDetailFragment">
+
+        <TextView
+            android:id="@+id/tvLabelShoeName"
+            style="@style/LabelForEditText"
+            android:labelFor="@id/edtShoeName"
+            android:text="@string/shoe_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtShoeName"
+            style="@style/MainEditText"
+            android:layout_marginHorizontal="20dp"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:text="@={shoeItem.name}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelShoeName" />
+
+        <TextView
+            android:id="@+id/tvLabelCompany"
+            style="@style/LabelForEditText"
+            android:labelFor="@id/edtCompany"
+            android:text="@string/company"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtShoeName" />
+
+        <EditText
+            android:id="@+id/edtCompany"
+            style="@style/MainEditText"
+            android:layout_marginHorizontal="20dp"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:text="@={shoeItem.company}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelCompany" />
+
+        <TextView
+            android:id="@+id/tvLabelShoeSize"
+            style="@style/LabelForEditText"
+            android:text="@string/shoe_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtCompany" />
+
+        <EditText
+            android:id="@+id/edtShoeSize"
+            style="@style/MainEditText"
+            android:layout_marginHorizontal="20dp"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:text="@={`` + shoeItem.size}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelShoeSize" />
+
+        <TextView
+            android:id="@+id/tvLabelDescription"
+            style="@style/LabelForEditText"
+            android:labelFor="@id/edtDescription"
+            android:text="@string/description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtShoeSize" />
+
+        <EditText
+            android:id="@+id/edtDescription"
+            style="@style/MainEditText"
+            android:layout_marginHorizontal="20dp"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:text="@={shoeItem.description}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelDescription" />
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/PrimaryButton"
+            android:onClick="@{(view) -> viewModel.saveShoe(shoeItem)}"
+            android:text="@string/save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtDescription" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/PrimaryButton"
+            android:text="@string/cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnSave" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

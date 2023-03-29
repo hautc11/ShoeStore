@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                style="@style/Title"
+                android:text="@{shoe.name}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="name" />
+
+            <TextView
+                style="@style/LabelForEditText"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                android:text="@{shoe.getSizeString()}"
+                tools:text="43" />
+
+            <TextView
+                style="@style/LabelForEditText"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                android:text="@{shoe.company}"
+                tools:text="company" />
+
+            <TextView
+                style="@style/LabelForEditText"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                android:text="@{shoe.description}"
+                tools:text="description" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
