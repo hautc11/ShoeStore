@@ -1,7 +1,6 @@
 package com.udacity.shoestore
 
 import android.os.Bundle
-import android.view.ContextMenu
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
